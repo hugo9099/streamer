@@ -18,7 +18,7 @@ sudo echo "rtmp {
                         record off;
                 }
         }
-}" >> /usr/local/nginx/conf/nginx.conf
+}" | sudo tee --append /usr/local/nginx/conf/nginx.conf > /dev/null
 
 sudo /usr/local/nginx/sbin/nginx -s stop
 sudo /usr/local/nginx/sbin/nginx
